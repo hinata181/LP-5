@@ -1,0 +1,16 @@
+g++ -fopenmp DFSBFS.cpp -o DFSBFS
+./DFSBFS
+ 
+g++ -fopenmp bubble_merge.cpp -o bubble_merge
+./bubble_merge
+
+g++ -fopenmp parallelred.cpp -o parallelred
+./parallelred
+
+%%writefile vectorAdd.cu
+!nvcc vectorAdd.cu -o vectorAdd
+!./vectorAdd
+
+%%writefile MartrixMul.cu
+!nvcc MartrixMul.cu -o MartrixMul
+!./MartrixMul
